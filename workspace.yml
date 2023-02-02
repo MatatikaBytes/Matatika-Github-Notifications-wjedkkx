@@ -1,7 +1,6 @@
 version: workspaces/v0.1
 name: Matatika Github Notifications
 app_properties:
-  WELCOME_DATASET_ALIAS: welcome
 dataset_paths:
 - analyze/datasets
 - .meltano/analyze/datasets
