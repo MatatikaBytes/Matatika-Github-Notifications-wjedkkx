@@ -10,10 +10,39 @@ plugins:
   - name: tap-github
     variant: meltanolabs
     pip_url: git+https://github.com/MeltanoLabs/tap-github.git
+    select:
+    - '!team*.*'
+    - '*.*'
+    - '!teams.*'
+    - '!dependencies.*'
+    - '!dependents.*'
+    - '!workflows.*'
+    - '!workflow_runs.*'
+    - '!workflow_run_jobs.*'
+    - '!projects.*'
+    - '!milestones.*'
+    - '!project_cards.*'
+    - '!project_columns.*'
+    - '!milestone_creator.*'
+    - '!project_columns.*'
+    - '!commits.*'
+    - '!readme.*'
+    - '!readme_html.*'
+    - '!pull_request_commits.*'
+    - '!commit_comments.*'
+    - '!events.*'
+    - '!issue_events.*'
+    - '!issue_comments.*'
+    - '!review_comments.*'
+    - '!review.*'
+    - '!reviews.*'
   loaders:
   - name: target-postgres
     variant: transferwise
     pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.1.0
+  - name: target-apprise
+    variant: autoidm
+    pip_url: target-apprise
   transformers:
   - name: dbt
     variant: dbt-labs
