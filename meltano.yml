@@ -58,3 +58,6 @@ plugins:
   - name: files-dbt
     variant: matatika
     pip_url: git+https://github.com/Matatika/files-dbt@v1.0.x.1
+  - name: analyze-github
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/analyze-github
