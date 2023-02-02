@@ -36,6 +36,13 @@ plugins:
     - '!review_comments.*'
     - '!review.*'
     - '!reviews.*'
+    - '!languages.*'
+    - '!community_profile.*'
+    - '!assignees.*'
+    - '!stats_contributors.*'
+    - '!contributors.*'
+    - '!collaborators.*'
+    - '!anonymous_contributors.*'
   loaders:
   - name: target-postgres
     variant: transferwise
