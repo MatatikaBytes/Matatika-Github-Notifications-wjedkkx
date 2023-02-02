@@ -1,7 +1,19 @@
 version: pipelines/v0.1
 name: GitHub
 timeout: 0
+script: |-
+  meltano install extractor tap-github
+  meltano install loader target-postgres
+  meltano install transformer dbt
+
+  meltano run tap-github target-postgres
+
+  meltano invoke dbt deps
+  meltano invoke dbt snapshot
+  meltano invoke dbt run
 data_components:
 - tap-github
 - Warehouse
 - dbt
+actions:
+- tap-github
