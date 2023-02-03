@@ -1,0 +1,32 @@
+version: datasets/v0.2
+source: Github
+title: Issues Created Today
+questions: what are the total number of issues created today?
+description: |-
+  Total number of issues created today.
+
+  #dashboard
+  #issue-dashboard
+metadata: |-
+  {
+    "name": "fact_daily_stats",
+    "related_table": {
+        "columns": [
+        ], 
+        "aggregates": [
+          {"name": "issues", "label": "Issues", "description": "Issues"}
+        ]
+    }
+  }
+visualisation: |-
+  {
+    "chartjs-chart": {
+        "chartType": "treemap"
+    }
+  }
+query: |-
+  SELECT
+    COALESCE(sum(created_issues), 0) "fact_daily_stats.issues"
+  FROM fact_daily_stats
+  WHERE date_day <= current_date
+  AND date_day >= current_date - INTERVAL '6 day'

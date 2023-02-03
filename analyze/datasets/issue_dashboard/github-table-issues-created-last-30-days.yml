@@ -1,0 +1,38 @@
+version: datasets/v0.2
+source: Github
+title: Open Issues Created Last 30 Days
+questions: what are the open issues created in the last 30 days?
+description: |-
+  Open issues created in the last 30 days.
+
+  We do not show closed issues in this table.
+
+  #dashboard
+  #issue-dashboard
+metadata: |-
+  {
+    "name": "issues",
+    "related_table": {
+      "columns": [
+        {"name": "created_at", "label": "Created At", "description": "Created At"}, 
+        {"name": "title", "label": "Title", "description": "Title"},
+        {"name": "user_login", "label": "Created By", "description": "Created By"},
+        {"name": "repo", "label": "Repo", "description": "Repo"},
+        {"name": "url", "label": "URL", "description": "URL"},
+        {"name": "assignees", "label": "Assignees", "description": "Assignees"}
+      ]
+    }
+  }
+visualisation: '{"google-chart": {"chartType": "Table"}}'
+query: |-
+  SELECT
+    created_at "issues.created_at"
+    , title "issues.title"
+    , user__login "issues.user_login"
+    , repo "issues.repo"
+    , url "issues.url"
+    , assignees "issues.assignees"
+  FROM issues
+  WHERE created_at::date >= current_date - INTERVAL '30 day'
+  AND "type" = 'issue'
+  AND closed_at IS NULL

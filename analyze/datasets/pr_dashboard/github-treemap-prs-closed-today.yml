@@ -1,0 +1,31 @@
+version: datasets/v0.2
+source: Github
+title: PRs Closed Today
+questions: what are the total number of PRs closed today?
+description: |-
+  Total number of PRs closed today.
+
+  #dashboard
+  #pr-dashboard
+metadata: |-
+  {
+    "name": "fact_daily_stats",
+    "related_table": {
+        "columns": [
+        ], 
+        "aggregates": [
+          {"name": "prs", "label": "Pull Requests", "description": "Pull Requests"}
+        ]
+    }
+  }
+visualisation: |-
+  {
+    "chartjs-chart": {
+        "chartType": "treemap"
+    }
+  }
+query: |-
+  SELECT
+    COALESCE(sum(closed_prs), 0) "fact_daily_stats.prs"
+  FROM fact_daily_stats
+  WHERE date_day = current_date

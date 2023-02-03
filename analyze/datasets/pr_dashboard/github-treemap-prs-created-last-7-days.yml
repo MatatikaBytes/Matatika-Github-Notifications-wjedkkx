@@ -1,0 +1,32 @@
+version: datasets/v0.2
+source: Github
+title: PRs Created Last 7 Days
+questions: what are the total number of PRs created in the last 7 days?
+description: |-
+  Total number of PRs created in the last 7 days.
+
+  #dashboard
+  #pr-dashboard
+metadata: |-
+  {
+    "name": "fact_daily_stats",
+    "related_table": {
+        "columns": [
+        ], 
+        "aggregates": [
+          {"name": "prs", "label": "Pull Requests", "description": "Pull Requests"}
+        ]
+    }
+  }
+visualisation: |-
+  {
+    "chartjs-chart": {
+        "chartType": "treemap"
+    }
+  }
+query: |-
+  SELECT
+    COALESCE(sum(created_prs), 0) "fact_daily_stats.prs"
+  FROM fact_daily_stats
+  WHERE date_day <= current_date
+  AND date_day >= current_date - INTERVAL '6 day'
