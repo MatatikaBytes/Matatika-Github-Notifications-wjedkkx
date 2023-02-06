@@ -54,6 +54,8 @@ final as (
         date_day
         , sum(created_issues) as "created_issues"
         , sum(closed_issues) as "closed_issues"
+        , sum(created_prs) as "created_prs"
+        , sum(closed_prs) as "closed_prs"
     from joined
     group by date_day
 )
