@@ -1,5 +1,6 @@
 version: pipelines/v0.1
 name: GitHub
+schedule: 0 0 2 * * *
 timeout: 0
 script: |-
   meltano install extractor tap-github
