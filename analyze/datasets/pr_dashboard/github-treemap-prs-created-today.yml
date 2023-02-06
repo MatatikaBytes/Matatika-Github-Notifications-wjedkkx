@@ -28,5 +28,4 @@ query: |-
   SELECT
     COALESCE(sum(created_prs), 0) "fact_daily_stats.prs"
   FROM fact_daily_stats
-  WHERE date_day <= current_date
-  AND date_day >= current_date - INTERVAL '6 day'
+  WHERE date_day = current_date
