@@ -1,12 +1,11 @@
 version: workspaces/v0.1
 name: Matatika Github Notifications
-app_properties:
 dataset_paths:
-- analyze/datasets
-- .meltano/analyze/datasets
+  - analyze/datasets
+  - .meltano/analyze/datasets
 channel_paths:
-- analyze/channels
+  - analyze/channels
 pipeline_paths:
-- pipelines
+  - pipelines
 plugin_paths:
-- plugins
+  - plugins
