@@ -8,9 +8,9 @@ with repositories as (
 joined as (
     select
         *
-        , stargazers_count - (select stargazers_count from repositories r1
+        , coalesce(stargazers_count - (select stargazers_count from repositories r1
                                 where r1.full_name = r.full_name
-                                and r1.prior_date_day = r.date_day) "daily_stars_gained"
+                                and r1.prior_date_day = r.date_day),0) "daily_stars_gained"
     from repositories r
 ),
 final as (
