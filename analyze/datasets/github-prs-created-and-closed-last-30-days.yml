@@ -1,11 +1,11 @@
 version: datasets/v0.2
 source: github
-title: Issues Created and Closed Last 30 Days
-questions: how many issues have been created and closed during the last 30 days?
+title: PRs Created and Closed Last 30 Days
+questions: how many prs have been created and closed during the last 30 days?
 description: |-
-  Issues created and closed for the last 30 days.
+  PRs created and closed for the last 30 days.
 
-  #issues
+  #prs
 metadata: |-
   {
     "name": "fds",
@@ -14,8 +14,8 @@ metadata: |-
         {"name": "date", "label": "Date", "description": "Date"}
       ], 
       "aggregates": [
-        {"name": "created_issues", "label": "Created Issues", "description": "Created Issues"}, 
-        {"name": "closed_issues", "label": "Closed Issues", "description": "Closed Issues"}
+        {"name": "created_prs", "label": "Created PRs", "description": "Created PRs"}, 
+        {"name": "closed_prs", "label": "Closed PRs", "description": "Closed PRs"}
       ]
     }
   }
@@ -35,8 +35,8 @@ visualisation: |-
 query: |-
   SELECT
   	date_day "fds.date"
-  	, COALESCE(created_issues, 0) "fds.created_issues"
-  	, COALESCE(closed_issues, 0) "fds.closed_issues"
+  	, COALESCE(created_prs, 0) "fds.created_prs"
+  	, COALESCE(closed_prs, 0) "fds.closed_prs"
   FROM fact_daily_stats fds
   WHERE date_day > current_date - INTERVAL '30 day'
   AND date_day <= current_date
