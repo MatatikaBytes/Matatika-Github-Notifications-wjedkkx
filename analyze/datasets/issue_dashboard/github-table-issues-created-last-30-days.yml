@@ -35,4 +35,3 @@ query: |-
   FROM issues
   WHERE created_at::date >= current_date - INTERVAL '30 day'
   AND "type" = 'issue'
-  AND closed_at IS NULL
