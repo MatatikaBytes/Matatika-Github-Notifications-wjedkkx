@@ -5,6 +5,7 @@ questions: how many issues have been created and closed during the last 30 days?
 description: |-
   Issues created and closed for the last 30 days.
 
+  #github
   #issues
 metadata: |-
   {

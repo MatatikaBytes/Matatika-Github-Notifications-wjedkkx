@@ -5,6 +5,7 @@ questions: what are the total number of issues closed today?
 description: |-
   Total number of issues closed today.
 
+  #github
   #dashboard
   #issue-dashboard
 metadata: |-

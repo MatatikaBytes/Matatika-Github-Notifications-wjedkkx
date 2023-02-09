@@ -5,6 +5,7 @@ questions: what are the total number of issues created today?
 description: |-
   Total number of issues created today.
 
+  #github
   #dashboard
   #issue-dashboard
 metadata: |-

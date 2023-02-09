@@ -5,6 +5,7 @@ questions: what are the prs created in the last 30 days?
 description: |-
   PRs created in the last 30 days.
 
+  #github
   #dashboard
   #pr-dashboard
 metadata: |-

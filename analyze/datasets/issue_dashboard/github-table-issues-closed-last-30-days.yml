@@ -5,6 +5,7 @@ questions: what were the issues closed in the last 30 days?
 description: |-
   Issues closed in the last 30 days.
 
+  #github
   #dashboard
   #issue-dashboard
 metadata: |-

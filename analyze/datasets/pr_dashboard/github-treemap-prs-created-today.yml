@@ -5,6 +5,7 @@ questions: what are the total number of PRs created today?
 description: |-
   Total number of PRs created today.
 
+  #github
   #dashboard
   #pr-dashboard
 metadata: |-

@@ -5,6 +5,7 @@ questions: how many prs have been created and closed during the last 30 days?
 description: |-
   PRs created and closed for the last 30 days.
 
+  #github
   #prs
 metadata: |-
   {

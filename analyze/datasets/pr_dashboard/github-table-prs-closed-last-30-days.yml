@@ -5,6 +5,7 @@ questions: what were the prs closed in the last 30 days?
 description: |-
   PRs closed in the last 30 days.
 
+  #github
   #dashboard
   #pr-dashboard
 metadata: |-

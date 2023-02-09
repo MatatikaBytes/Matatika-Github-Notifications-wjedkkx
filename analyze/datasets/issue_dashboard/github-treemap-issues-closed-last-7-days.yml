@@ -5,6 +5,7 @@ questions: what are the total number of issues we closed in the last 7 days?
 description: |-
   Total number of issues closed in the last 7 days.
 
+  #github
   #dashboard
   #issue-dashboard
 metadata: |-

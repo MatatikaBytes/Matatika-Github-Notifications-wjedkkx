@@ -5,6 +5,7 @@ questions: what are the total number of PRs closed today?
 description: |-
   Total number of PRs closed today.
 
+  #github
   #dashboard
   #pr-dashboard
 metadata: |-

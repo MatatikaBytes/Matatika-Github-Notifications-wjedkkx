@@ -7,7 +7,7 @@ description: |-
 
   All currently open github issues for your synced repositories.
 
-  #export
+  #github-export
 metadata:
 visualisation:
 query: |-
