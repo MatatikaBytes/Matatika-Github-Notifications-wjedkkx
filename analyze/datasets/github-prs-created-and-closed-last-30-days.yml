@@ -41,7 +41,7 @@ query: |-
   	date_day "fds.date"
   	, COALESCE(created_prs, 0) "fds.created_prs"
   	, COALESCE(closed_prs, 0) "fds.closed_prs"
-  FROM fact_daily_stats fds
+  FROM github_fact_daily_stats fds
   WHERE date_day > current_date - INTERVAL '30 day'
   AND date_day <= current_date
   ORDER BY date_day::date ASC

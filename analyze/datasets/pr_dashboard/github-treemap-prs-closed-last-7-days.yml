@@ -4,13 +4,13 @@ title: PRs Closed Last 7 Days
 questions: what are the total number of PRs we closed in the last 7 days?
 description: |-
   Total number of PRs closed in the last 7 days.
-  
+
   #github
   #dashboard
   #pr-dashboard
 metadata: |-
   {
-    "name": "fact_daily_stats",
+    "name": "github_fact_daily_stats",
     "related_table": {
         "columns": [
         ], 
@@ -27,7 +27,7 @@ visualisation: |-
   }
 query: |-
   SELECT
-    COALESCE(sum(closed_prs), 0) "fact_daily_stats.prs"
-  FROM fact_daily_stats
+    COALESCE(sum(closed_prs), 0) "github_fact_daily_stats.prs"
+  FROM github_fact_daily_stats
   WHERE date_day <= current_date
   AND date_day >= current_date - INTERVAL '6 day'

@@ -10,7 +10,7 @@ description: |-
   #pr-dashboard
 metadata: |-
   {
-    "name": "fact_daily_stats",
+    "name": "github_fact_daily_stats",
     "related_table": {
         "columns": [
         ], 
@@ -27,6 +27,6 @@ visualisation: |-
   }
 query: |-
   SELECT
-    COALESCE(sum(created_prs), 0) "fact_daily_stats.prs"
-  FROM fact_daily_stats
+    COALESCE(sum(created_prs), 0) "github_fact_daily_stats.prs"
+  FROM github_fact_daily_stats
   WHERE date_day = current_date

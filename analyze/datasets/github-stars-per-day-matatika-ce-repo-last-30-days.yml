@@ -36,7 +36,7 @@ query: |-
   SELECT 
   	date_day "drh.date"
   	, stargazers_count "drh.stars"
-  FROM dim_repositories_history drh
+  FROM github_dim_repositories_history drh
   WHERE full_name = 'Matatika/matatika-ce'
   AND date_day > current_date - INTERVAL '30 day'
   AND date_day <= current_date
