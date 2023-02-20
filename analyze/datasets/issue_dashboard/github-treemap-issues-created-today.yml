@@ -29,5 +29,4 @@ query: |-
   SELECT
     COALESCE(sum(created_issues), 0) "github_fact_daily_stats.issues"
   FROM github_fact_daily_stats
-  WHERE date_day <= current_date
-  AND date_day >= current_date - INTERVAL '6 day'
+  WHERE date_day = current_date
