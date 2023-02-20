@@ -50,6 +50,10 @@ plugins:
   - name: target-apprise
     variant: autoidm
     pip_url: target-apprise
+  transforms:
+  - name: dbt-tap-github
+    variant: matatika
+    pip_url: https://github.com/Matatika/dbt-tap-github
   transformers:
   - name: dbt
     variant: dbt-labs
