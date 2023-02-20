@@ -24,6 +24,7 @@ clean-targets:
   - logs
 models:
   my_meltano_project:
+  tap_github: {}
 vars:
-  my_meltano_project:
+  tap_github:
     schema: "{{ env_var('DBT_SOURCE_SCHEMA') }}"
