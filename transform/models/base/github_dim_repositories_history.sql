@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 with repositories as (
-    select * from {{ ref('dim_repositories_snapshot') }}
+    select * from {{ ref('github_dim_repositories_snapshot') }}
 ),
 most_recent_daily_repositories as (
     select

@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: dim_repositories_snapshot
+  - name: github_dim_repositories_snapshot
   - name: dim_date
-  - name: dim_repositories_history
-  - name: fact_daily_stats
-  - name: fact_stars
+  - name: github_dim_repositories_history
+  - name: github_fact_daily_stats
+  - name: github_fact_stars

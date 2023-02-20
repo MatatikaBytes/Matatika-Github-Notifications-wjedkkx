@@ -3,7 +3,7 @@
 with repositories as (
     select 
         * 
-    from {{ ref('dim_repositories_history') }}
+    from {{ ref('github_dim_repositories_history') }}
 ),
 joined as (
     select

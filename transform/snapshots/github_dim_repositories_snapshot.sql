@@ -1,4 +1,4 @@
-{% snapshot dim_repositories_snapshot %}
+{% snapshot github_dim_repositories_snapshot %}
 
     {{ config(
             target_schema=var('schema'),
